@@ -60,30 +60,31 @@
 
 
 
-
 <!-- فرم ورود -->
-<div id="loginForm" class="container mx-auto px-4 py-10 animate-slideDown">
-  <div class="max-w-sm mx-auto bg-white p-6 rounded-xl shadow-md">
-    <h2 class="text-2xl font-semibold mb-4 text-center flex items-center justify-center gap-2">
-  🤝 Collaboration Panel
+<div id="loginForm">
+  <div id="loginBox">
+<h2 class="collab-title">
+  <img src="file/images/Collaboration.ico" alt="Collaboration" class="collab-icon">
+  Collaboration Panel
 </h2>
 
-    
-    <input type="text" id="username" placeholder="username" class="w-full mb-3 px-4 py-2 border rounded focus:outline-none focus:ring" />
-    <input type="password" id="password" placeholder="password" class="w-full mb-3 px-4 py-2 border rounded focus:outline-none focus:ring" />
 
-    <!-- کپچا -->
-    <div class="flex items-center mb-3">
-      <span id="captchaCode" class="px-3 py-2 bg-gray-200 rounded text-lg font-mono"></span>
-      <input type="text" id="captchaInput" placeholder="Security code" class="ml-2 flex-1 px-3 py-2 border rounded focus:outline-none focus:ring" />
-      <button onclick="generateCaptcha()" class="ml-2 px-3 py-2 bg-gray-300 rounded hover:bg-gray-400">🔄</button>
+
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <div id="captchaWrapper">
+      <span id="captchaCode"></span>
+      <input type="text" id="captchaInput" placeholder="Security code" />
+      <button onclick="generateCaptcha()">🔄</button>
     </div>
 
-   <button type="button" onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">ورود</button>
+    <button type="button" onclick="login()">ورود</button>
 
-    <p id="loginMsg" class="mt-3 text-red-500 text-sm text-center"></p>
+    <p id="loginMsg"></p>
   </div>
 </div>
+
 
 
 
